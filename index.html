@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gameboy for You 💕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADING -->
+  <div id="loading-screen" class="screen active">
+    <div class="loading-box">
+      <div class="loading-text">LOADING...</div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <!-- MAIN MENU -->
+  <div id="main-screen" class="screen">
+    <h1 class="title">🎮 Gameboy for You 🎀</h1>
+    <div class="menu">
+      <button class="menu-btn" data-page="message">💌 Pesan</button>
+      <button class="menu-btn" data-page="gallery">📸 Galeri</button>
+      <button class="menu-btn" data-page="tetris">🕹️ Game</button>
+    </div>
+  </div>
+
+  <!-- PESAN -->
+  <div id="message-screen" class="screen">
+    <div class="message-box">
+      <p class="message-text"></p>
+      <button class="back-btn" data-page="main">⬅ Kembali</button>
+    </div>
+  </div>
+
+  <!-- GALERI -->
+  <div id="gallery-screen" class="screen">
+    <h2>📸 Momen Kita</h2>
+    <div id="gallery" class="gallery-grid"></div>
+    <button class="back-btn" data-page="main">⬅ Kembali</button>
+  </div>
+
+  <!-- TETRIS -->
+  <div id="tetris-screen" class="screen">
+    <h2>🕹️ Game Mode</h2>
+    <canvas id="tetris-canvas" width="300" height="400"></canvas>
+    <button class="back-btn" data-page="main">⬅ Kembali</button>
+  </div>
+
+  <!-- PESAN AKHIR -->
+  <div id="final-message-modal" class="modal">
+    <div class="modal-content">
+      <p>💖 Jangan merasa kesepian, masih ada orang yang sayang sama kamu 🤗<br>Semangattt Cantikkkk 😊🤍</p>
+      <button id="ok-btn">OK 💕</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

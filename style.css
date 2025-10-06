@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background: radial-gradient(circle at top, #e6d5f7, #b088f9);
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+.screen.active {
+  display: block;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Loading */
+.loading-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background: #fff3;
+  border-radius: 10px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+#progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #9a4ef1;
+  transition: 0.3s;
+}
+
+/* Main Menu */
+.title {
+  color: #fff;
+  margin-top: 80px;
+}
+
+.menu button {
+  display: block;
+  width: 220px;
+  margin: 20px auto;
+  padding: 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #7f00ff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu button:hover {
+  background: #9a4ef1;
+  transform: scale(1.05);
+}
+
+/* Message */
+.message-box {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.message-text {
+  white-space: pre-line;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #b088f9;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  max-width: 300px;
+  font-size: 10px;
+}
+
+button {
+  font-family: inherit;
+}
